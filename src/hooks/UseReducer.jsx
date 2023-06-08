@@ -38,6 +38,7 @@ if we want to manipulate multiple state in single event we can use useReducer
 in this type of case.
 Above case is same we want to increase Counter as well as we want to toggle
 the text using single click event.
+As a whole, if we want to manage complex state logics then we can use useReducer hook
 */
 
 const reducer = (state, action) => {
@@ -54,12 +55,12 @@ const reducer = (state, action) => {
 const UseReducer = () => {
   // ====NOTE====
   /**
-   * useReducer take a function as first arguement in which state and action
-     is passed. This is the function where we handle modifying our multiple states
+   * useReducer take a function as first arguement takes a state and an action,
+     and returns a new state value based on the action.
    * The second arguement is the initial state value
    * useReducer returns a array with initial state value and a dispatch function where
-     we can pass out action i.e which state we want to modify or which action we 
-     want to take
+     we can pass out action i.e. based on which we can modify our states
+     
   */
   const [state, dispatch] = useReducer(reducer, { count: 0, showText: true });
 
